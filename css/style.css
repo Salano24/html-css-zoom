@@ -1,0 +1,220 @@
+/* #region Common Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+/* #endregion Common Rules */
+
+/* #region Utilities */
+:root {
+    --primary: #008000;
+    --dark: #000000;
+    --light-dark: #222222;
+    --elements: #4A4A4A;
+    --allert: #AF2510;
+    --light: #FEFEFE;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:var(--dark);
+    color: var(--light);
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+/* #endregion Utilities */
+
+/* #region flex grid */
+.container {
+    width: 90%;
+    /* max-width: 1384px;  */
+    margin: 0 auto;
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -0.3rem;
+    height: 80vh;
+}
+
+.col-1 {
+    width: calc((100% / 12) * 1);
+}
+
+.col-2 {
+    width: calc((100% / 12) * 2);
+}
+
+.col-2_14 {
+    width: calc((100% / 14) * 2 - 1rem);
+    padding: 0.2rem 0.1rem;
+}
+
+.col-3 {
+    width: calc((100% / 12) * 3);
+}
+
+.col-4 {
+    width: calc((100% / 12) * 4);
+}
+
+.col-5 {
+    width: calc((100% / 12) * 5);
+}
+
+.col-6 {
+    width: calc((100% / 12) * 6);
+}
+
+.col-7 {
+    width: calc((100% / 12) * 7);
+}
+
+.col-8 {
+    width: calc((100% / 12) * 8);
+}
+
+.col-9 {
+    width: calc((100% / 12) * 9);
+}
+
+.col-10 {
+    width: calc((100% / 12) * 10);
+}
+
+.col-11 {
+    width: calc((100% / 12) * 11);
+}
+
+.col-12 {
+    width: calc((100% / 12) * 12);
+}
+/* #endregion flex grid */
+
+/* #region Main */
+main {
+    height: 90vh;
+    display: flex;
+    position: relative;
+}
+
+main .container {
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* #endregion Main */
+
+/* #region details top right */
+.view_cam {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.speaker_view, .full_size {
+    background-color: var(--elements);
+    font-size: 1rem;
+    padding: 0.2rem;
+    margin: 0.3rem;
+    border-radius: 0.3rem;
+}
+/* #endregion Main */
+
+/* #region cam */
+.cam {
+    position: relative;
+    background-image: url(https://picsum.photos/200/300?random=35);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 145px;
+}
+
+
+.name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #4a4a4a99;
+    padding: 0.5rem;
+}
+
+img {
+    height: 145px;
+}
+/* #endregion cam */
+
+/* #region footer */
+footer {
+    height: 10vh;
+    background-color: var(--light-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action {
+    flex-grow: 1;
+    display: flex;
+}
+
+.room {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.room i, .action i {
+    display: block;
+}
+
+.end {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.share i {
+    color: var(--primary);
+}
+
+footer i {
+    font-size: 2rem;
+    padding: 0.3rem;
+}
+
+.action div, .room div {
+    padding: 1rem;
+    text-align: center;
+}
+
+.end span {
+    background-color: var(--elements);
+    padding: 4vh;
+    color: red;
+}
+/* #endregion footer */
